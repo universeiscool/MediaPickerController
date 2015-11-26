@@ -1,0 +1,889 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E9F5FE3C1C026B1E0072447F /* MediaPickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = E9F5FE3B1C026B1E0072447F /* MediaPickerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9F5FE431C026B1E0072447F /* MediaPickerController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F5FE381C026B1E0072447F /* MediaPickerController.framework */; };
+		E9F5FE481C026B1E0072447F /* MediaPickerControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FE471C026B1E0072447F /* MediaPickerControllerTests.swift */; };
+		E9F5FE531C0271B80072447F /* MediaPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FE521C0271B80072447F /* MediaPickerController.swift */; };
+		E9F5FE5B1C0276960072447F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FE5A1C0276960072447F /* AppDelegate.swift */; };
+		E9F5FE641C0276960072447F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9F5FE631C0276960072447F /* Assets.xcassets */; };
+		E9F5FE671C0276960072447F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F5FE651C0276960072447F /* LaunchScreen.storyboard */; };
+		E9F5FE721C0276960072447F /* MediaPickerController_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FE711C0276960072447F /* MediaPickerController_ExampleTests.swift */; };
+		E9F5FE7D1C0276960072447F /* MediaPickerController_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FE7C1C0276960072447F /* MediaPickerController_ExampleUITests.swift */; };
+		E9F5FE881C02790C0072447F /* MediaPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FE521C0271B80072447F /* MediaPickerController.swift */; };
+		E9F5FE891C02790D0072447F /* MediaPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FE521C0271B80072447F /* MediaPickerController.swift */; };
+		E9F5FE8A1C02790E0072447F /* MediaPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FE521C0271B80072447F /* MediaPickerController.swift */; };
+		E9F5FE8B1C02790E0072447F /* MediaPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FE521C0271B80072447F /* MediaPickerController.swift */; };
+		E9F5FE8F1C0303570072447F /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FE8E1C0303570072447F /* PhotosViewController.swift */; };
+		E9F5FE901C0303C60072447F /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FE8E1C0303570072447F /* PhotosViewController.swift */; };
+		E9F5FE911C0303C70072447F /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FE8E1C0303570072447F /* PhotosViewController.swift */; };
+		E9F5FE921C0303C70072447F /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FE8E1C0303570072447F /* PhotosViewController.swift */; };
+		E9F5FE931C0303C80072447F /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FE8E1C0303570072447F /* PhotosViewController.swift */; };
+		E9F5FE9B1C0326220072447F /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FE9A1C0326220072447F /* PhotoCollectionViewCell.swift */; };
+		E9F5FE9C1C0326220072447F /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FE9A1C0326220072447F /* PhotoCollectionViewCell.swift */; };
+		E9F5FE9D1C0326220072447F /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FE9A1C0326220072447F /* PhotoCollectionViewCell.swift */; };
+		E9F5FE9E1C0326220072447F /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FE9A1C0326220072447F /* PhotoCollectionViewCell.swift */; };
+		E9F5FE9F1C0326220072447F /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FE9A1C0326220072447F /* PhotoCollectionViewCell.swift */; };
+		E9F5FEA11C0331BA0072447F /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEA01C0331BA0072447F /* AlbumsViewController.swift */; };
+		E9F5FEA21C0331BA0072447F /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEA01C0331BA0072447F /* AlbumsViewController.swift */; };
+		E9F5FEA31C0331BA0072447F /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEA01C0331BA0072447F /* AlbumsViewController.swift */; };
+		E9F5FEA41C0331BA0072447F /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEA01C0331BA0072447F /* AlbumsViewController.swift */; };
+		E9F5FEA51C0331BA0072447F /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEA01C0331BA0072447F /* AlbumsViewController.swift */; };
+		E9F5FEA71C03436D0072447F /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEA61C03436D0072447F /* AlbumTableViewCell.swift */; };
+		E9F5FEA81C03436D0072447F /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEA61C03436D0072447F /* AlbumTableViewCell.swift */; };
+		E9F5FEA91C03436D0072447F /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEA61C03436D0072447F /* AlbumTableViewCell.swift */; };
+		E9F5FEAA1C03436D0072447F /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEA61C03436D0072447F /* AlbumTableViewCell.swift */; };
+		E9F5FEAB1C03436D0072447F /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEA61C03436D0072447F /* AlbumTableViewCell.swift */; };
+		E9F5FEB51C0483130072447F /* AlbumFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEB41C0483130072447F /* AlbumFetcher.swift */; };
+		E9F5FEB61C0483130072447F /* AlbumFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEB41C0483130072447F /* AlbumFetcher.swift */; };
+		E9F5FEB71C0483130072447F /* AlbumFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEB41C0483130072447F /* AlbumFetcher.swift */; };
+		E9F5FEB81C0483130072447F /* AlbumFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEB41C0483130072447F /* AlbumFetcher.swift */; };
+		E9F5FEB91C0483130072447F /* AlbumFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEB41C0483130072447F /* AlbumFetcher.swift */; };
+		E9F5FEBB1C04E16F0072447F /* MomentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEBA1C04E16F0072447F /* MomentsViewController.swift */; };
+		E9F5FEBC1C04E16F0072447F /* MomentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEBA1C04E16F0072447F /* MomentsViewController.swift */; };
+		E9F5FEBD1C04E16F0072447F /* MomentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEBA1C04E16F0072447F /* MomentsViewController.swift */; };
+		E9F5FEBE1C04E16F0072447F /* MomentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEBA1C04E16F0072447F /* MomentsViewController.swift */; };
+		E9F5FEBF1C04E16F0072447F /* MomentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEBA1C04E16F0072447F /* MomentsViewController.swift */; };
+		E9F5FEC11C04E5BD0072447F /* MediaPickerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEC01C04E5BD0072447F /* MediaPickerCollectionViewController.swift */; };
+		E9F5FEC21C04E5BD0072447F /* MediaPickerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEC01C04E5BD0072447F /* MediaPickerCollectionViewController.swift */; };
+		E9F5FEC31C04E5BD0072447F /* MediaPickerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEC01C04E5BD0072447F /* MediaPickerCollectionViewController.swift */; };
+		E9F5FEC41C04E5BD0072447F /* MediaPickerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEC01C04E5BD0072447F /* MediaPickerCollectionViewController.swift */; };
+		E9F5FEC51C04E5BD0072447F /* MediaPickerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEC01C04E5BD0072447F /* MediaPickerCollectionViewController.swift */; };
+		E9F5FEC71C04EEAC0072447F /* MomentFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEC61C04EEAC0072447F /* MomentFetcher.swift */; };
+		E9F5FEC81C04EEAC0072447F /* MomentFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEC61C04EEAC0072447F /* MomentFetcher.swift */; };
+		E9F5FEC91C04EEAC0072447F /* MomentFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEC61C04EEAC0072447F /* MomentFetcher.swift */; };
+		E9F5FECA1C04EEAC0072447F /* MomentFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEC61C04EEAC0072447F /* MomentFetcher.swift */; };
+		E9F5FECB1C04EEAC0072447F /* MomentFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FEC61C04EEAC0072447F /* MomentFetcher.swift */; };
+		E9F5FECD1C04F9440072447F /* MomentsCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FECC1C04F9440072447F /* MomentsCollectionViewHeader.swift */; };
+		E9F5FECE1C04F9440072447F /* MomentsCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FECC1C04F9440072447F /* MomentsCollectionViewHeader.swift */; };
+		E9F5FECF1C04F9440072447F /* MomentsCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FECC1C04F9440072447F /* MomentsCollectionViewHeader.swift */; };
+		E9F5FED01C04F9440072447F /* MomentsCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FECC1C04F9440072447F /* MomentsCollectionViewHeader.swift */; };
+		E9F5FED11C04F9440072447F /* MomentsCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FECC1C04F9440072447F /* MomentsCollectionViewHeader.swift */; };
+		E9F5FED31C0509E60072447F /* MomentsCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FED21C0509E60072447F /* MomentsCollectionViewFlowLayout.swift */; };
+		E9F5FED41C0509E60072447F /* MomentsCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FED21C0509E60072447F /* MomentsCollectionViewFlowLayout.swift */; };
+		E9F5FED51C0509E60072447F /* MomentsCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FED21C0509E60072447F /* MomentsCollectionViewFlowLayout.swift */; };
+		E9F5FED61C0509E60072447F /* MomentsCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FED21C0509E60072447F /* MomentsCollectionViewFlowLayout.swift */; };
+		E9F5FED71C0509E60072447F /* MomentsCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FED21C0509E60072447F /* MomentsCollectionViewFlowLayout.swift */; };
+		E9F5FED91C0516750072447F /* MomentsCollectionDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FED81C0516750072447F /* MomentsCollectionDecorationView.swift */; };
+		E9F5FEDA1C0516750072447F /* MomentsCollectionDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FED81C0516750072447F /* MomentsCollectionDecorationView.swift */; };
+		E9F5FEDB1C0516750072447F /* MomentsCollectionDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FED81C0516750072447F /* MomentsCollectionDecorationView.swift */; };
+		E9F5FEDC1C0516750072447F /* MomentsCollectionDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FED81C0516750072447F /* MomentsCollectionDecorationView.swift */; };
+		E9F5FEDD1C0516750072447F /* MomentsCollectionDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F5FED81C0516750072447F /* MomentsCollectionDecorationView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E9F5FE441C026B1E0072447F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9F5FE2F1C026B1E0072447F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9F5FE371C026B1E0072447F;
+			remoteInfo = MediaPickerController;
+		};
+		E9F5FE6E1C0276960072447F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9F5FE2F1C026B1E0072447F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9F5FE571C0276960072447F;
+			remoteInfo = "MediaPickerController Example";
+		};
+		E9F5FE791C0276960072447F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9F5FE2F1C026B1E0072447F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9F5FE571C0276960072447F;
+			remoteInfo = "MediaPickerController Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E9F5FE381C026B1E0072447F /* MediaPickerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MediaPickerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9F5FE3B1C026B1E0072447F /* MediaPickerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediaPickerController.h; sourceTree = "<group>"; };
+		E9F5FE3D1C026B1E0072447F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9F5FE421C026B1E0072447F /* MediaPickerControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediaPickerControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9F5FE471C026B1E0072447F /* MediaPickerControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPickerControllerTests.swift; sourceTree = "<group>"; };
+		E9F5FE491C026B1E0072447F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9F5FE521C0271B80072447F /* MediaPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPickerController.swift; sourceTree = "<group>"; };
+		E9F5FE581C0276960072447F /* MediaPickerController Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MediaPickerController Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9F5FE5A1C0276960072447F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E9F5FE631C0276960072447F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E9F5FE661C0276960072447F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E9F5FE681C0276960072447F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9F5FE6D1C0276960072447F /* MediaPickerController ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MediaPickerController ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9F5FE711C0276960072447F /* MediaPickerController_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPickerController_ExampleTests.swift; sourceTree = "<group>"; };
+		E9F5FE731C0276960072447F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9F5FE781C0276960072447F /* MediaPickerController ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MediaPickerController ExampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9F5FE7C1C0276960072447F /* MediaPickerController_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPickerController_ExampleUITests.swift; sourceTree = "<group>"; };
+		E9F5FE7E1C0276960072447F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9F5FE8E1C0303570072447F /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		E9F5FE9A1C0326220072447F /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		E9F5FEA01C0331BA0072447F /* AlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
+		E9F5FEA61C03436D0072447F /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		E9F5FEB41C0483130072447F /* AlbumFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumFetcher.swift; sourceTree = "<group>"; };
+		E9F5FEBA1C04E16F0072447F /* MomentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentsViewController.swift; sourceTree = "<group>"; };
+		E9F5FEC01C04E5BD0072447F /* MediaPickerCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPickerCollectionViewController.swift; sourceTree = "<group>"; };
+		E9F5FEC61C04EEAC0072447F /* MomentFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentFetcher.swift; sourceTree = "<group>"; };
+		E9F5FECC1C04F9440072447F /* MomentsCollectionViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentsCollectionViewHeader.swift; sourceTree = "<group>"; };
+		E9F5FED21C0509E60072447F /* MomentsCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentsCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		E9F5FED81C0516750072447F /* MomentsCollectionDecorationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentsCollectionDecorationView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E9F5FE341C026B1E0072447F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9F5FE3F1C026B1E0072447F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9F5FE431C026B1E0072447F /* MediaPickerController.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9F5FE551C0276960072447F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9F5FE6A1C0276960072447F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9F5FE751C0276960072447F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E9F5FE2E1C026B1E0072447F = {
+			isa = PBXGroup;
+			children = (
+				E9F5FE3A1C026B1E0072447F /* MediaPickerController */,
+				E9F5FE461C026B1E0072447F /* MediaPickerControllerTests */,
+				E9F5FE591C0276960072447F /* MediaPickerController Example */,
+				E9F5FE701C0276960072447F /* MediaPickerController ExampleTests */,
+				E9F5FE7B1C0276960072447F /* MediaPickerController ExampleUITests */,
+				E9F5FE391C026B1E0072447F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E9F5FE391C026B1E0072447F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9F5FE381C026B1E0072447F /* MediaPickerController.framework */,
+				E9F5FE421C026B1E0072447F /* MediaPickerControllerTests.xctest */,
+				E9F5FE581C0276960072447F /* MediaPickerController Example.app */,
+				E9F5FE6D1C0276960072447F /* MediaPickerController ExampleTests.xctest */,
+				E9F5FE781C0276960072447F /* MediaPickerController ExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9F5FE3A1C026B1E0072447F /* MediaPickerController */ = {
+			isa = PBXGroup;
+			children = (
+				E9F5FEB31C0482E00072447F /* Model */,
+				E9F5FE991C0323290072447F /* View */,
+				E9F5FE981C0323170072447F /* Controller */,
+				E9F5FE3B1C026B1E0072447F /* MediaPickerController.h */,
+				E9F5FE3D1C026B1E0072447F /* Info.plist */,
+			);
+			path = MediaPickerController;
+			sourceTree = "<group>";
+		};
+		E9F5FE461C026B1E0072447F /* MediaPickerControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				E9F5FE471C026B1E0072447F /* MediaPickerControllerTests.swift */,
+				E9F5FE491C026B1E0072447F /* Info.plist */,
+			);
+			path = MediaPickerControllerTests;
+			sourceTree = "<group>";
+		};
+		E9F5FE591C0276960072447F /* MediaPickerController Example */ = {
+			isa = PBXGroup;
+			children = (
+				E9F5FE5A1C0276960072447F /* AppDelegate.swift */,
+				E9F5FE631C0276960072447F /* Assets.xcassets */,
+				E9F5FE651C0276960072447F /* LaunchScreen.storyboard */,
+				E9F5FE681C0276960072447F /* Info.plist */,
+			);
+			path = "MediaPickerController Example";
+			sourceTree = "<group>";
+		};
+		E9F5FE701C0276960072447F /* MediaPickerController ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				E9F5FE711C0276960072447F /* MediaPickerController_ExampleTests.swift */,
+				E9F5FE731C0276960072447F /* Info.plist */,
+			);
+			path = "MediaPickerController ExampleTests";
+			sourceTree = "<group>";
+		};
+		E9F5FE7B1C0276960072447F /* MediaPickerController ExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E9F5FE7C1C0276960072447F /* MediaPickerController_ExampleUITests.swift */,
+				E9F5FE7E1C0276960072447F /* Info.plist */,
+			);
+			path = "MediaPickerController ExampleUITests";
+			sourceTree = "<group>";
+		};
+		E9F5FE981C0323170072447F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E9F5FE521C0271B80072447F /* MediaPickerController.swift */,
+				E9F5FEA01C0331BA0072447F /* AlbumsViewController.swift */,
+				E9F5FE8E1C0303570072447F /* PhotosViewController.swift */,
+				E9F5FEBA1C04E16F0072447F /* MomentsViewController.swift */,
+				E9F5FEC01C04E5BD0072447F /* MediaPickerCollectionViewController.swift */,
+				E9F5FED21C0509E60072447F /* MomentsCollectionViewFlowLayout.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E9F5FE991C0323290072447F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E9F5FE9A1C0326220072447F /* PhotoCollectionViewCell.swift */,
+				E9F5FEA61C03436D0072447F /* AlbumTableViewCell.swift */,
+				E9F5FECC1C04F9440072447F /* MomentsCollectionViewHeader.swift */,
+				E9F5FED81C0516750072447F /* MomentsCollectionDecorationView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E9F5FEB31C0482E00072447F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E9F5FEB41C0483130072447F /* AlbumFetcher.swift */,
+				E9F5FEC61C04EEAC0072447F /* MomentFetcher.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E9F5FE351C026B1E0072447F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9F5FE3C1C026B1E0072447F /* MediaPickerController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E9F5FE371C026B1E0072447F /* MediaPickerController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9F5FE4C1C026B1E0072447F /* Build configuration list for PBXNativeTarget "MediaPickerController" */;
+			buildPhases = (
+				E9F5FE331C026B1E0072447F /* Sources */,
+				E9F5FE341C026B1E0072447F /* Frameworks */,
+				E9F5FE351C026B1E0072447F /* Headers */,
+				E9F5FE361C026B1E0072447F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MediaPickerController;
+			productName = MediaPickerController;
+			productReference = E9F5FE381C026B1E0072447F /* MediaPickerController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E9F5FE411C026B1E0072447F /* MediaPickerControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9F5FE4F1C026B1E0072447F /* Build configuration list for PBXNativeTarget "MediaPickerControllerTests" */;
+			buildPhases = (
+				E9F5FE3E1C026B1E0072447F /* Sources */,
+				E9F5FE3F1C026B1E0072447F /* Frameworks */,
+				E9F5FE401C026B1E0072447F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9F5FE451C026B1E0072447F /* PBXTargetDependency */,
+			);
+			name = MediaPickerControllerTests;
+			productName = MediaPickerControllerTests;
+			productReference = E9F5FE421C026B1E0072447F /* MediaPickerControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E9F5FE571C0276960072447F /* MediaPickerController Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9F5FE7F1C0276960072447F /* Build configuration list for PBXNativeTarget "MediaPickerController Example" */;
+			buildPhases = (
+				E9F5FE541C0276960072447F /* Sources */,
+				E9F5FE551C0276960072447F /* Frameworks */,
+				E9F5FE561C0276960072447F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MediaPickerController Example";
+			productName = "MediaPickerController Example";
+			productReference = E9F5FE581C0276960072447F /* MediaPickerController Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E9F5FE6C1C0276960072447F /* MediaPickerController ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9F5FE821C0276960072447F /* Build configuration list for PBXNativeTarget "MediaPickerController ExampleTests" */;
+			buildPhases = (
+				E9F5FE691C0276960072447F /* Sources */,
+				E9F5FE6A1C0276960072447F /* Frameworks */,
+				E9F5FE6B1C0276960072447F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9F5FE6F1C0276960072447F /* PBXTargetDependency */,
+			);
+			name = "MediaPickerController ExampleTests";
+			productName = "MediaPickerController ExampleTests";
+			productReference = E9F5FE6D1C0276960072447F /* MediaPickerController ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E9F5FE771C0276960072447F /* MediaPickerController ExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9F5FE851C0276960072447F /* Build configuration list for PBXNativeTarget "MediaPickerController ExampleUITests" */;
+			buildPhases = (
+				E9F5FE741C0276960072447F /* Sources */,
+				E9F5FE751C0276960072447F /* Frameworks */,
+				E9F5FE761C0276960072447F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9F5FE7A1C0276960072447F /* PBXTargetDependency */,
+			);
+			name = "MediaPickerController ExampleUITests";
+			productName = "MediaPickerController ExampleUITests";
+			productReference = E9F5FE781C0276960072447F /* MediaPickerController ExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E9F5FE2F1C026B1E0072447F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "universeiscool UG (haftungsbeschränkt)";
+				TargetAttributes = {
+					E9F5FE371C026B1E0072447F = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					E9F5FE411C026B1E0072447F = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					E9F5FE571C0276960072447F = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = PWFRCPYJ9M;
+					};
+					E9F5FE6C1C0276960072447F = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = E9F5FE571C0276960072447F;
+					};
+					E9F5FE771C0276960072447F = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = E9F5FE571C0276960072447F;
+					};
+				};
+			};
+			buildConfigurationList = E9F5FE321C026B1E0072447F /* Build configuration list for PBXProject "MediaPickerController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E9F5FE2E1C026B1E0072447F;
+			productRefGroup = E9F5FE391C026B1E0072447F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E9F5FE371C026B1E0072447F /* MediaPickerController */,
+				E9F5FE411C026B1E0072447F /* MediaPickerControllerTests */,
+				E9F5FE571C0276960072447F /* MediaPickerController Example */,
+				E9F5FE6C1C0276960072447F /* MediaPickerController ExampleTests */,
+				E9F5FE771C0276960072447F /* MediaPickerController ExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E9F5FE361C026B1E0072447F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9F5FE401C026B1E0072447F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9F5FE561C0276960072447F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9F5FE671C0276960072447F /* LaunchScreen.storyboard in Resources */,
+				E9F5FE641C0276960072447F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9F5FE6B1C0276960072447F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9F5FE761C0276960072447F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E9F5FE331C026B1E0072447F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9F5FEA71C03436D0072447F /* AlbumTableViewCell.swift in Sources */,
+				E9F5FEA11C0331BA0072447F /* AlbumsViewController.swift in Sources */,
+				E9F5FED91C0516750072447F /* MomentsCollectionDecorationView.swift in Sources */,
+				E9F5FE8F1C0303570072447F /* PhotosViewController.swift in Sources */,
+				E9F5FEC71C04EEAC0072447F /* MomentFetcher.swift in Sources */,
+				E9F5FEBB1C04E16F0072447F /* MomentsViewController.swift in Sources */,
+				E9F5FECD1C04F9440072447F /* MomentsCollectionViewHeader.swift in Sources */,
+				E9F5FE9B1C0326220072447F /* PhotoCollectionViewCell.swift in Sources */,
+				E9F5FED31C0509E60072447F /* MomentsCollectionViewFlowLayout.swift in Sources */,
+				E9F5FEC11C04E5BD0072447F /* MediaPickerCollectionViewController.swift in Sources */,
+				E9F5FE531C0271B80072447F /* MediaPickerController.swift in Sources */,
+				E9F5FEB51C0483130072447F /* AlbumFetcher.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9F5FE3E1C026B1E0072447F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9F5FEBC1C04E16F0072447F /* MomentsViewController.swift in Sources */,
+				E9F5FE9C1C0326220072447F /* PhotoCollectionViewCell.swift in Sources */,
+				E9F5FE901C0303C60072447F /* PhotosViewController.swift in Sources */,
+				E9F5FECE1C04F9440072447F /* MomentsCollectionViewHeader.swift in Sources */,
+				E9F5FED41C0509E60072447F /* MomentsCollectionViewFlowLayout.swift in Sources */,
+				E9F5FE881C02790C0072447F /* MediaPickerController.swift in Sources */,
+				E9F5FE481C026B1E0072447F /* MediaPickerControllerTests.swift in Sources */,
+				E9F5FEC81C04EEAC0072447F /* MomentFetcher.swift in Sources */,
+				E9F5FEDA1C0516750072447F /* MomentsCollectionDecorationView.swift in Sources */,
+				E9F5FEA21C0331BA0072447F /* AlbumsViewController.swift in Sources */,
+				E9F5FEA81C03436D0072447F /* AlbumTableViewCell.swift in Sources */,
+				E9F5FEB61C0483130072447F /* AlbumFetcher.swift in Sources */,
+				E9F5FEC21C04E5BD0072447F /* MediaPickerCollectionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9F5FE541C0276960072447F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9F5FEBD1C04E16F0072447F /* MomentsViewController.swift in Sources */,
+				E9F5FE9D1C0326220072447F /* PhotoCollectionViewCell.swift in Sources */,
+				E9F5FE911C0303C70072447F /* PhotosViewController.swift in Sources */,
+				E9F5FECF1C04F9440072447F /* MomentsCollectionViewHeader.swift in Sources */,
+				E9F5FED51C0509E60072447F /* MomentsCollectionViewFlowLayout.swift in Sources */,
+				E9F5FE891C02790D0072447F /* MediaPickerController.swift in Sources */,
+				E9F5FE5B1C0276960072447F /* AppDelegate.swift in Sources */,
+				E9F5FEC91C04EEAC0072447F /* MomentFetcher.swift in Sources */,
+				E9F5FEDB1C0516750072447F /* MomentsCollectionDecorationView.swift in Sources */,
+				E9F5FEA31C0331BA0072447F /* AlbumsViewController.swift in Sources */,
+				E9F5FEA91C03436D0072447F /* AlbumTableViewCell.swift in Sources */,
+				E9F5FEB71C0483130072447F /* AlbumFetcher.swift in Sources */,
+				E9F5FEC31C04E5BD0072447F /* MediaPickerCollectionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9F5FE691C0276960072447F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9F5FEBE1C04E16F0072447F /* MomentsViewController.swift in Sources */,
+				E9F5FE9E1C0326220072447F /* PhotoCollectionViewCell.swift in Sources */,
+				E9F5FE921C0303C70072447F /* PhotosViewController.swift in Sources */,
+				E9F5FED01C04F9440072447F /* MomentsCollectionViewHeader.swift in Sources */,
+				E9F5FED61C0509E60072447F /* MomentsCollectionViewFlowLayout.swift in Sources */,
+				E9F5FE8A1C02790E0072447F /* MediaPickerController.swift in Sources */,
+				E9F5FE721C0276960072447F /* MediaPickerController_ExampleTests.swift in Sources */,
+				E9F5FECA1C04EEAC0072447F /* MomentFetcher.swift in Sources */,
+				E9F5FEDC1C0516750072447F /* MomentsCollectionDecorationView.swift in Sources */,
+				E9F5FEA41C0331BA0072447F /* AlbumsViewController.swift in Sources */,
+				E9F5FEAA1C03436D0072447F /* AlbumTableViewCell.swift in Sources */,
+				E9F5FEB81C0483130072447F /* AlbumFetcher.swift in Sources */,
+				E9F5FEC41C04E5BD0072447F /* MediaPickerCollectionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9F5FE741C0276960072447F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9F5FEBF1C04E16F0072447F /* MomentsViewController.swift in Sources */,
+				E9F5FE9F1C0326220072447F /* PhotoCollectionViewCell.swift in Sources */,
+				E9F5FE931C0303C80072447F /* PhotosViewController.swift in Sources */,
+				E9F5FED11C04F9440072447F /* MomentsCollectionViewHeader.swift in Sources */,
+				E9F5FED71C0509E60072447F /* MomentsCollectionViewFlowLayout.swift in Sources */,
+				E9F5FE8B1C02790E0072447F /* MediaPickerController.swift in Sources */,
+				E9F5FE7D1C0276960072447F /* MediaPickerController_ExampleUITests.swift in Sources */,
+				E9F5FECB1C04EEAC0072447F /* MomentFetcher.swift in Sources */,
+				E9F5FEDD1C0516750072447F /* MomentsCollectionDecorationView.swift in Sources */,
+				E9F5FEA51C0331BA0072447F /* AlbumsViewController.swift in Sources */,
+				E9F5FEAB1C03436D0072447F /* AlbumTableViewCell.swift in Sources */,
+				E9F5FEB91C0483130072447F /* AlbumFetcher.swift in Sources */,
+				E9F5FEC51C04E5BD0072447F /* MediaPickerCollectionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E9F5FE451C026B1E0072447F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9F5FE371C026B1E0072447F /* MediaPickerController */;
+			targetProxy = E9F5FE441C026B1E0072447F /* PBXContainerItemProxy */;
+		};
+		E9F5FE6F1C0276960072447F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9F5FE571C0276960072447F /* MediaPickerController Example */;
+			targetProxy = E9F5FE6E1C0276960072447F /* PBXContainerItemProxy */;
+		};
+		E9F5FE7A1C0276960072447F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9F5FE571C0276960072447F /* MediaPickerController Example */;
+			targetProxy = E9F5FE791C0276960072447F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E9F5FE651C0276960072447F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9F5FE661C0276960072447F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E9F5FE4A1C026B1E0072447F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E9F5FE4B1C026B1E0072447F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E9F5FE4D1C026B1E0072447F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MediaPickerController/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = uic.MediaPickerController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E9F5FE4E1C026B1E0072447F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MediaPickerController/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = uic.MediaPickerController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E9F5FE501C026B1E0072447F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MediaPickerControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = uic.MediaPickerControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E9F5FE511C026B1E0072447F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MediaPickerControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = uic.MediaPickerControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E9F5FE801C0276960072447F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "MediaPickerController Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "uic.MediaPickerController-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		E9F5FE811C0276960072447F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "MediaPickerController Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "uic.MediaPickerController-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		E9F5FE831C0276960072447F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "MediaPickerController ExampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "uic.MediaPickerController-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MediaPickerController Example.app/MediaPickerController Example";
+			};
+			name = Debug;
+		};
+		E9F5FE841C0276960072447F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "MediaPickerController ExampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "uic.MediaPickerController-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MediaPickerController Example.app/MediaPickerController Example";
+			};
+			name = Release;
+		};
+		E9F5FE861C0276960072447F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "MediaPickerController ExampleUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "uic.MediaPickerController-ExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "MediaPickerController Example";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		E9F5FE871C0276960072447F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "MediaPickerController ExampleUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "uic.MediaPickerController-ExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "MediaPickerController Example";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E9F5FE321C026B1E0072447F /* Build configuration list for PBXProject "MediaPickerController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9F5FE4A1C026B1E0072447F /* Debug */,
+				E9F5FE4B1C026B1E0072447F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9F5FE4C1C026B1E0072447F /* Build configuration list for PBXNativeTarget "MediaPickerController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9F5FE4D1C026B1E0072447F /* Debug */,
+				E9F5FE4E1C026B1E0072447F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E9F5FE4F1C026B1E0072447F /* Build configuration list for PBXNativeTarget "MediaPickerControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9F5FE501C026B1E0072447F /* Debug */,
+				E9F5FE511C026B1E0072447F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E9F5FE7F1C0276960072447F /* Build configuration list for PBXNativeTarget "MediaPickerController Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9F5FE801C0276960072447F /* Debug */,
+				E9F5FE811C0276960072447F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E9F5FE821C0276960072447F /* Build configuration list for PBXNativeTarget "MediaPickerController ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9F5FE831C0276960072447F /* Debug */,
+				E9F5FE841C0276960072447F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E9F5FE851C0276960072447F /* Build configuration list for PBXNativeTarget "MediaPickerController ExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9F5FE861C0276960072447F /* Debug */,
+				E9F5FE871C0276960072447F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E9F5FE2F1C026B1E0072447F /* Project object */;
+}
