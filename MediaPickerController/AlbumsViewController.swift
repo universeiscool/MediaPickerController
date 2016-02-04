@@ -13,8 +13,14 @@ private let reuseIdentifier = "AlbumTableViewCell"
 
 public class AlbumsViewController: UITableViewController
 {
+    weak var delegate: AlbumsViewControllerDelegate?
+    
     var albums:[[MediaPickerAlbum]]?
-    var selectionClosure: ((album: MediaPickerAlbum) -> Void)?
+    
+    var activeAlbums:[[MediaPickerAlbum]]?
+    
+    var hideMoments = false
+    
     lazy var cachingManager:PHCachingImageManager? = {
         let manager = PHCachingImageManager.defaultManager() as? PHCachingImageManager
         manager?.allowsCachingHighQualityImages = false
@@ -47,6 +53,11 @@ public class AlbumsViewController: UITableViewController
         setup()
     }
     
+    deinit
+    {
+        print("deinit AlbumsViewController")
+    }
+    
     private func setup()
     {
         modalPresentationStyle = .Popover
@@ -71,15 +82,19 @@ public class AlbumsViewController: UITableViewController
         tableView.tableFooterView = UIView()
         tableView.rowHeight = 80.0
         tableView.registerClass(AlbumTableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
-        
-        let albumCount = CGFloat(albums?.flatten().count ?? 0)
-        preferredContentSize = CGSizeMake(UIScreen.mainScreen().bounds.width, albumCount*80.0)
+    }
+    
+    public override func viewWillAppear(animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        activeAlbums = albums?.filter { hideMoments ? $0.first?.type != .Moments : true }
+        tableView.reloadData()
     }
     
     public override func viewDidLayoutSubviews()
     {
         super.viewDidLayoutSubviews()
-        let albumCount = CGFloat(albums?.flatten().count ?? 0)
+        let albumCount = CGFloat(activeAlbums?.flatten().count ?? 0)
         preferredContentSize = CGSizeMake(UIScreen.mainScreen().bounds.width, albumCount*80.0)
     }
     
@@ -87,29 +102,24 @@ public class AlbumsViewController: UITableViewController
     {
             return .None
     }
-    
-    override public func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-    }
 
     // MARK: UITableViewDataSource
 
     override public func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
-        return albums?.count ?? 0
+        return activeAlbums?.count ?? 0
     }
 
     override public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return albums?[section].count ?? 0
+        return activeAlbums?[section].count ?? 0
     }
 
     override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! AlbumTableViewCell
 
-        guard let album = albums?[indexPath.section][indexPath.row] else {
+        guard let album = activeAlbums?[indexPath.section][indexPath.row] else {
             cell.bind("", amount: 0)
             return cell
         }
@@ -153,10 +163,15 @@ public class AlbumsViewController: UITableViewController
     
     public override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-        guard let album = albums?[indexPath.section][indexPath.row] else {
+        guard let album = activeAlbums?[indexPath.section][indexPath.row] else {
             return
         }
         
-        selectionClosure?(album: album)
+        delegate?.didSelectAlbum(album)
     }
+}
+
+protocol AlbumsViewControllerDelegate: class
+{
+    func didSelectAlbum(album:MediaPickerAlbum)
 }

@@ -66,7 +66,7 @@ public class MomentsViewController: MediaPickerCollectionViewController
             collectionView?.setContentOffset(CGPointZero, animated: false)
             mediaPickerController.selectAlbumButtonTitle = "\(album?.title ?? "") ▾"
             if let fetchResult = album?.fetchResult where moments == nil {
-                let fetcher = MomentFetcher()
+                let fetcher = MomentFetcher.shared
                 fetcher.fetchMoments(fetchResult) { (moments:[MediaPickerMoment]) in
                     self.moments = moments
                     self.collectionView?.reloadData()
@@ -95,9 +95,12 @@ public class MomentsViewController: MediaPickerCollectionViewController
     {
         super.viewWillAppear(animated)
         collectionView?.addGestureRecognizer(selectSectionGesture)
-        
+
         if selectedSection != nil {
             mediaPickerController.doneButtonView.enabled = true
+        }
+        if moments != nil {
+            collectionView?.reloadData()
         }
     }
     

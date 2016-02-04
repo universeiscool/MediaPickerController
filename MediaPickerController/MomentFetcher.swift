@@ -11,10 +11,21 @@ import Photos
 
 public class MomentFetcher
 {
+    public static let shared = MomentFetcher()
+    
+    private var moments = [MediaPickerMoment]()
+    
+    private init()
+    {
+    }
+    
     public func fetchMoments(result:PHFetchResult, completion:((moments: [MediaPickerMoment]) -> Void))
     {
+        guard moments.count == 0 else {
+            return completion(moments: moments)
+        }
+        
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            var moments = [MediaPickerMoment]()
             
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "EEEE, d. MMMM yyyy"
@@ -45,10 +56,12 @@ public class MomentFetcher
  
                 let title = titleElements.joinWithSeparator(" - ")
                 
-                moments.append(MediaPickerMoment(title: title, date: date, assets: assets))
+                self.moments.append(MediaPickerMoment(title: title, date: date, assets: assets))
             }
+            
+            self.moments = self.moments.reverse()
             dispatch_async(dispatch_get_main_queue()) {
-                completion(moments: moments.reverse())
+                completion(moments: self.moments)
             }
         }
     }

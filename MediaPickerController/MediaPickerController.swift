@@ -79,6 +79,8 @@ public class MediaPickerController: UINavigationController
         }
     }
     
+    public var prevSelectedAssetIdentifiers:[String]?
+    
     lazy var doneButtonView:UIBarButtonItem = {
         let button = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: Selector("didClickDoneButton:"))
         button.enabled = false
@@ -120,16 +122,7 @@ public class MediaPickerController: UINavigationController
     lazy public var albumsViewController: AlbumsViewController = {
         let vc = AlbumsViewController(albums: self.albums)
         vc.preferredContentSize = self.view.bounds.size
-        vc.selectionClosure = { (album: MediaPickerAlbum) in
-            self.albumsViewController.dismissViewControllerAnimated(true, completion: nil)
-            if album.type == .Moments {
-                self.setViewControllers([self.momentsViewController], animated: false)
-                self.momentsViewController.album = album
-            } else {
-                self.setViewControllers([self.photosViewController], animated: false)
-                self.photosViewController.album = album
-            }
-        }
+        vc.delegate = self
         return vc
     }()
     
@@ -150,8 +143,9 @@ public class MediaPickerController: UINavigationController
         NSFontAttributeName: UIFont(name: "HelveticaNeue-Light", size: 16.0)!,
         NSKernAttributeName: 1.5
     ]
+    public var hintText:String?
     
-    convenience init(mediaPickerOptions:[MediaPickerOption]?)
+    public convenience init(mediaPickerOptions:[MediaPickerOption]?)
     {
         self.init(nibName: nil, bundle: nil)
         
@@ -175,12 +169,15 @@ public class MediaPickerController: UINavigationController
         super.viewDidLoad()
         selectAlbumButtonTitle = "Loading ..."
         
-        let fetcher = AlbumFetcher()
+        let fetcher = AlbumFetcher.shared
         fetcher.fetchAlbums{ (albums) in
             self.selectAlbumButtonView.enabled = true
             self.albums = albums
             if let album = self.albums?.flatten().filter({ $0.type == .Moments }).first {
                 self.momentsViewController.album = album
+            } else if let album = self.albums?.flatten().first {
+                self.setViewControllers([self.photosViewController], animated: false)
+                self.photosViewController.album = album
             }
         }
     }
@@ -189,12 +186,23 @@ public class MediaPickerController: UINavigationController
     {
         super.viewWillAppear(animated)
         PHPhotoLibrary.sharedPhotoLibrary().registerChangeObserver(self)
+        
+        // Make sure MomentsViewController won't be displayed, if allowsMultipleSelection is not allowed
+        if albums?.count > 0 && !allowsMultipleSelection {
+            if getActiveViewController() is MomentsViewController {
+                setViewControllers([photosViewController], animated: false)
+                if let album = self.albums?.flatten().filter({ $0.type == .AllAssets }).first where photosViewController.album == nil {
+                    self.photosViewController.album = album
+                }
+            }
+        }
     }
     
-    public override func viewWillDisappear(animated: Bool)
+    public override func viewDidDisappear(animated: Bool)
     {
-        super.viewWillDisappear(animated)
+        super.viewDidDisappear(animated)
         PHPhotoLibrary.sharedPhotoLibrary().unregisterChangeObserver(self)
+        selectedAssets.removeAll()
     }
 
     override public func didReceiveMemoryWarning()
@@ -224,7 +232,8 @@ public class MediaPickerController: UINavigationController
         let sourceRect = CGRect(x: senderRect.origin.x, y: senderRect.origin.y + 4.0, width: senderRect.size.width, height: senderRect.size.height)
         popover.sourceRect = sourceRect
         popover.delegate = self
-        albumsViewController.tableView.reloadData()
+        
+        albumsViewController.hideMoments = !allowsMultipleSelection
         
         presentViewController(albumsViewController, animated: true, completion: nil)
     }
@@ -259,6 +268,16 @@ public class MediaPickerController: UINavigationController
             case let .NavigationBarTitleAttributes(value): navigationBarTitleAttributes = value
             }
         }
+    }
+    
+    private func getActiveViewController() -> MediaPickerCollectionViewController?
+    {
+        if let vc = viewControllers.first as? MomentsViewController {
+            return vc
+        } else if let vc = viewControllers.first as? PhotosViewController {
+            return vc
+        }
+        return nil
     }
 }
 
@@ -295,3 +314,18 @@ extension MediaPickerController: UIPopoverPresentationControllerDelegate
 //        }
 //    }
 //}
+
+extension MediaPickerController: AlbumsViewControllerDelegate
+{
+    func didSelectAlbum(album:MediaPickerAlbum)
+    {
+        self.albumsViewController.dismissViewControllerAnimated(true, completion: nil)
+        if album.type == .Moments {
+            self.setViewControllers([self.momentsViewController], animated: false)
+            self.momentsViewController.album = album
+        } else {
+            self.setViewControllers([self.photosViewController], animated: false)
+            self.photosViewController.album = album
+        }
+    }
+}

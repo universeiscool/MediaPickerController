@@ -11,10 +11,21 @@ import Photos
 
 public class AlbumFetcher
 {
+    public static let shared = AlbumFetcher()
+    
+    private var albums = [[MediaPickerAlbum]]()
+    
+    private init()
+    {
+    }
+    
     public func fetchAlbums(completion:((albums: [[MediaPickerAlbum]]) -> Void))
     {
+        guard albums.count == 0 else {
+            return completion(albums: albums)
+        }
+        
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            var albums = [[MediaPickerAlbum]]()
             
             let momentsFetchOptions = PHFetchOptions()
             momentsFetchOptions.predicate = NSPredicate(format: "estimatedAssetCount > %d", 1)
@@ -26,7 +37,9 @@ public class AlbumFetcher
             // Moments
             let momentsAlbum = MediaPickerAlbum(title: "Moments", collection: moments.lastObject as? PHAssetCollection, assetCount: moments.count, type: MediaPickerAlbumType.Moments)
             momentsAlbum.fetchResult = moments
-            albums.append([momentsAlbum])
+            if momentsAlbum.assetCount > 0 {
+                self.albums.append([momentsAlbum])
+            }
             
             // Smart albums / seperate allasset album
             let convertedSmartAlbums = self.convertAlbumFetchResult(smartAlbums)
@@ -34,15 +47,15 @@ public class AlbumFetcher
             // Put AllAssets into seperate array
             let allAssets = convertedSmartAlbums.filter({ $0.type == MediaPickerAlbumType.AllAssets })
             if allAssets.count == 1 {
-                albums.append(allAssets)
-                albums.append(convertedSmartAlbums.filter({$0.type != MediaPickerAlbumType.AllAssets }))
+                self.albums.append(allAssets)
+                self.albums.append(convertedSmartAlbums.filter({$0.type != MediaPickerAlbumType.AllAssets }))
             }
             
             // User created Albums
-            albums.append(self.convertAlbumFetchResult(userAlbums))
+            self.albums.append(self.convertAlbumFetchResult(userAlbums))
             
             dispatch_async(dispatch_get_main_queue()) {
-                completion(albums: albums)
+                completion(albums: self.albums)
             }
         }
     }

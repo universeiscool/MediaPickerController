@@ -32,13 +32,17 @@ public class PhotosViewController: MediaPickerCollectionViewController
     override public func viewDidLoad()
     {
         super.viewDidLoad()
-        self.collectionView!.registerClass(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: kReuseIdentifier)
+        collectionView!.registerClass(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: kReuseIdentifier)
     }
     
     public override func viewWillAppear(animated: Bool)
     {
         super.viewWillAppear(animated)
         mediaPickerController.doneButtonView.enabled = !mediaPickerController.selectedAssets.isEmpty
+        
+        if album != nil && fetchResult != nil {
+            collectionView?.reloadData()
+        }
     }
     
     // MARK: UICollectionViewDataSource
@@ -56,21 +60,24 @@ public class PhotosViewController: MediaPickerCollectionViewController
     override public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(kReuseIdentifier, forIndexPath: indexPath) as! PhotoCollectionViewCell
-        
         if cell.tag != 0 {
             cachingImageManager.cancelImageRequest(PHImageRequestID(cell.tag))
         }
         
         if let asset = fetchResult?[indexPath.row] as? PHAsset {
-            cell.tag = Int(cachingImageManager.requestImageForAsset(asset, targetSize: imageSize, contentMode: imageContentMode, options: nil) { (result, _) in
-                cell.bind(result)
-            })
             if mediaPickerController.selectedAssets.indexOf(asset) != nil {
                 cell.selected = true
                 collectionView.selectItemAtIndexPath(indexPath, animated: false, scrollPosition: UICollectionViewScrollPosition.None)
             } else {
                 cell.selected = false
             }
+            if mediaPickerController.prevSelectedAssetIdentifiers?.indexOf(asset.localIdentifier) != nil {
+                cell.enabled = false
+            }
+            
+            cell.tag = Int(cachingImageManager.requestImageForAsset(asset, targetSize: imageSize, contentMode: imageContentMode, options: nil) { (result, _) in
+                cell.bind(result)
+            })
         }
         
         return cell
@@ -94,7 +101,7 @@ public class PhotosViewController: MediaPickerCollectionViewController
     {
         let cell = collectionView.cellForItemAtIndexPath(indexPath) as! PhotoCollectionViewCell
         
-        if(!cell.isEnabled){
+        if(!cell.enabled){
             return false
         } else if mediaPickerController.selectedAssets.count == mediaPickerController.maximumSelect {
             return false

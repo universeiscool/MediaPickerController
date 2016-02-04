@@ -84,11 +84,6 @@ public class MediaPickerCollectionViewController: UICollectionViewController, UI
         activityIndicator.removeFromSuperview()
     }
     
-    override public func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-    }
-
     override public func traitCollectionDidChange(previousTraitCollection: UITraitCollection?)
     {
         super.traitCollectionDidChange(previousTraitCollection)
