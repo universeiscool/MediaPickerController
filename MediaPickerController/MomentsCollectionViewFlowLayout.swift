@@ -207,7 +207,7 @@ class MomentsCollectionViewFlowLayout: UICollectionViewFlowLayout
     {
         var lA = [UICollectionViewLayoutAttributes]()
         
-        for var section = 0, numberOfSections = collectionView!.numberOfSections(); section < numberOfSections; ++section {
+        for section in 0..<collectionView!.numberOfSections() {
             let sectionIndexPath = NSIndexPath(forItem: 0, inSection: section)
             
             // HeaderAttributes
@@ -216,7 +216,7 @@ class MomentsCollectionViewFlowLayout: UICollectionViewFlowLayout
             }
             
             // ItemAttributes
-            for var item = 0, itemsInSection = collectionView!.numberOfItemsInSection(section); item < itemsInSection; ++item {
+            for item in 0..<collectionView!.numberOfItemsInSection(section) {
                 if let la = cellAttributes[NSIndexPath(forItem: item, inSection: section)] where CGRectIntersectsRect(rect, la.frame) {
                     lA.append(la)
                 }

@@ -82,18 +82,18 @@ public class MediaPickerController: UINavigationController
     public var prevSelectedAssetIdentifiers:[String]?
     
     lazy var doneButtonView:UIBarButtonItem = {
-        let button = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: Selector("didClickDoneButton:"))
+        let button = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: #selector(didClickDoneButton(_:)))
         button.enabled = false
         return button
     }()
     
     lazy var cancelButtonView:UIBarButtonItem = {
-        return UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: Selector("didClickCancelButton:"))
+        return UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: #selector(didClickCancelButton(_:)))
     }()
     
     lazy var selectAlbumButtonView: UIButton = {
         let button = UIButton()
-        button.addTarget(self, action: Selector("didClickSelectAlbumButton:"), forControlEvents: UIControlEvents.TouchUpInside)
+        button.addTarget(self, action: #selector(didClickSelectAlbumButton(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         button.enabled = false
         return button
     }()

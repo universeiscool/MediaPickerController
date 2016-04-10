@@ -41,7 +41,7 @@ public class MomentsViewController: MediaPickerCollectionViewController
     }
     
     private lazy var selectSectionGesture:UITapGestureRecognizer = {
-        let gr = UITapGestureRecognizer(target: self, action: Selector("selectSection:"))
+        let gr = UITapGestureRecognizer(target: self, action: #selector(selectSection(_:)))
         gr.cancelsTouchesInView = true
         return gr
     }()
